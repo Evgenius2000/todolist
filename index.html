@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel ="stylesheet" href="index.css">
+    <link rel ="stylesheet" href="bootstrap.min.css">
+    <title>ToDo list by Monah</title>
+</head>
+<body onload=init()>
+
+    <div class="container">
+        <div class="input-group">
+            <input id="taskInput" type="text" class="form-control" placeholder="Введите, что выхотите сделать">
+            <div class="input-group-append">
+              <input class="btn btn-success" type="button" value="Add task" onclick=addTask()>
+            </div>
+          </div>
+          <div class="d-flex flex-row">
+            <div class = "d-flex flex-column taskcol timeDiv"><button class="btn btn-warning" onclick=sortDate()>Date</button></div>
+            <div class = "d-flex flex-row taskcol priorityFilt"><button class="btn btn-warning" onclick=sortPriority()>Priorety</button></div>
+            <div class = "d-flex flex-row descriptionFilt">
+              <div class="input-group input-group-sm">
+                <div class="input-group-prepend">
+                  <span class="input-group-text" id="inputGroup-sizing-sm">Search</span>
+                </div>
+                <input id="search" type="text" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm" onkeyup=search()>
+              </div>
+            </div>
+            <div class = "taskcol"><button class="btn btn-warning" onclick=sortStatus()>by Status</button></div>
+          </div>
+          
+        <div id="main">
+          
+        </div>
+    </div>
+    
+    <div id="modalFormEdit" class="modalForm">
+      <div id="modalEdit" class="modalWindow">        
+          <h3 class="d-flex justify-content-center">Change task</h3>
+          <textarea id="editTaskArea" class="d-flex editText" rows="2" cols="50"  name="text"></textarea>
+          <div class="modal-buttons  d-flex flex-wrap align-content-end">
+            <button id="saveButton" name="button" class="btn btn-primary" onclick=saveEditedTask()>Save</button>
+            <button id="saveButton" name="button" class="btn btn-secondary" onclick=closeModals()>Cancel</button>
+          </div>
+          </div>
+  </div>
+  <div id="modalFormDelete" class="modalForm">
+    <div id="modaldelete"s class="modalWindow">        
+        <h3 class="d-flex justify-content-center">Confirm Delete</h3>
+        <h5 class="d-flex justify-content-center">Are you really wand to delelte task: </h5>
+        <p id="deletedTask" class="d-flex justify-content-center">task</p>
+        <div class="modal-buttons d-flex flex-wrap align-content-end">
+          <button id="saveButton" name="button" class="btn btn-danger" onclick=deleteTask()>Delete</button>
+          <button id="saveButton" name="button" class="btn btn-secondary" onclick=closeModals()>Cancel</button>
+        </div>
+        </div>
+</div>
+    <script src="moment.js"></script>
+    <script src="index.js"></script>
+
+</body>
+</html>

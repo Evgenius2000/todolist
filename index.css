@@ -1,0 +1,91 @@
+body{
+    padding-top: 20px;
+  
+}
+/* div{
+    border-style: solid;
+    border-color: black;
+    border-width: 1px;
+} */
+
+.taskcol{
+    margin-left:1em ;
+    margin-top: 1em;
+    align-items: center;
+    height: 36px;
+}
+.description{
+    width:50%;
+    min-width: 150px;
+    background-color: skyblue;
+    border-radius: 3px;
+    padding-left: 1em;
+    padding-right: 1em;
+    margin-left:1em ;
+    margin-top: 1em;
+    align-items: center;
+}
+.priority{
+    justify-content: center;
+    background-color: silver;
+
+    width:5%;
+    min-width: 40px;
+}
+.done{
+    background-color: rgb(195, 222, 233);
+    text-decoration: line-through;
+}
+
+.modalForm {
+    position: fixed;
+    display: none;
+    top:0px;
+    Left:0px;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(78, 78, 78, 0.8);
+    z-index: 2;
+    overflow: auto;
+    margin: 0;
+}
+.modalWindow {
+    margin: 15% auto;
+    padding: 10px;
+    width: 400px;
+    min-height: 270px;
+    height: 30%;
+    background-color:silver;
+    border: 2px, solid, gray;
+    border-radius: 5px;
+
+}
+.editText{
+    align-items: center;
+    
+    width: 100%;
+    height: 70%;
+    color:darkslategray;
+    resize: none;
+}
+.modal-buttons{
+    margin-top: 3px;
+    width: 100%;
+    justify-content: space-around;
+
+}
+.timeDiv{
+    min-width: 78px;
+}
+.priorityFilt{
+    width: 72px;
+}
+.descriptionFilt{
+    width:50%;
+    min-width: 150px;
+
+    padding-right: 1em;
+    margin-left:1em ;
+    margin-top: 1em;
+    align-items: center;
+}
