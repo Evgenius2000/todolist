@@ -1,4 +1,4 @@
-var toDoList = new toDoList;
+var toDoList = new toDoList();
 var activeItem = null;
 var sortUp = false;
 //************************************************** block of initializations ******************************** */
